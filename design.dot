@@ -1,0 +1,30 @@
+digraph ApplicationArchitecture {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=lightblue];
+    
+    ThreadDataLoaders [label="Thread-Safe File Loaders"];
+    DataClass [label="Data Class"];
+    AbstractBaseClass [label="Abstract Base Report Class"];
+    SpecificReportClass [label="Specific Report Class"];
+    
+    subgraph cluster_0 {
+        label = "File Retrieval";
+        color = lightgrey;
+        ThreadDataLoaders -> DataClass;
+    }
+    
+    subgraph cluster_1 {
+        label = "Report Generation";
+        color = lightgrey;
+        AbstractBaseClass -> SpecificReportClass;
+    }
+    
+    DataClass -> SpecificReportClass [label="Provides Data"];
+    
+    ConcurrencyManager [label="Concurrency Manager"];
+    ConcurrencyManager -> DataClass [label="Manages"];
+    ConcurrencyManager -> SpecificReportClass [label="Triggers"];
+    
+    OutputManager [label="Output Manager"];
+    SpecificReportClass -> OutputManager [label="Generates Output"];
+}

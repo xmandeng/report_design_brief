@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="695pt" height="412pt" viewBox="0.00 0.00 695.43 412.00">
+<g id="graph0" class="graph" transform="translate(4,408) scale(1)" data-name="ApplicationArchitecture">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-408 691.43,-408 691.43,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="cluster_0">
+
+<polygon fill="none" stroke="lightgrey" points="252,-209 252,-325.2 608,-325.2 608,-209 252,-209" style=""/>
+<text text-anchor="middle" x="430" y="-308.6" font-family="Times,serif" font-size="14.00" style="">File Retrieval and Data Management</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_1">
+
+<polygon fill="none" stroke="lightgrey" points="8,-80.8 8,-312.8 244,-312.8 244,-80.8 8,-80.8" style=""/>
+<text text-anchor="middle" x="126" y="-296.2" font-family="Times,serif" font-size="14.00" style="">Report Generation</text>
+</g>
+<!-- DataClass -->
+<g id="node1" class="node" pointer-events="visible" data-name="DataClass">
+
+<polygon fill="lightgreen" stroke="black" points="260.39,-217.5 260.39,-291.9 599.61,-291.9 599.61,-217.5 260.39,-217.5" style=""/>
+<text text-anchor="middle" x="430" y="-275.3" font-family="Times,serif" font-size="14.00" style="">Data Class</text>
+<polyline fill="none" stroke="black" points="260.39,-267.1 599.61,-267.1" style=""/>
+<text text-anchor="middle" x="297.93" y="-250.5" font-family="Times,serif" font-size="14.00" style="">load_csv()</text>
+<polyline fill="none" stroke="black" points="335.48,-242.3 335.48,-267.1" style=""/>
+<text text-anchor="middle" x="378.46" y="-250.5" font-family="Times,serif" font-size="14.00" style="">load_excel()</text>
+<polyline fill="none" stroke="black" points="421.44,-242.3 421.44,-267.1" style=""/>
+<text text-anchor="middle" x="470.64" y="-250.5" font-family="Times,serif" font-size="14.00" style="">load_parquet()</text>
+<polyline fill="none" stroke="black" points="519.85,-242.3 519.85,-267.1" style=""/>
+<text text-anchor="middle" x="559.73" y="-250.5" font-family="Times,serif" font-size="14.00" style="">load_json()</text>
+<polyline fill="none" stroke="black" points="260.39,-242.3 599.61,-242.3" style=""/>
+<text text-anchor="middle" x="310.65" y="-225.7" font-family="Times,serif" font-size="14.00" style="">load_firm()</text>
+<polyline fill="none" stroke="black" points="360.92,-217.5 360.92,-242.3" style=""/>
+<text text-anchor="middle" x="415.18" y="-225.7" font-family="Times,serif" font-size="14.00" style="">load_client()</text>
+<polyline fill="none" stroke="black" points="469.44,-217.5 469.44,-242.3" style=""/>
+<text text-anchor="middle" x="534.09" y="-225.7" font-family="Times,serif" font-size="14.00" style="">load_exchange()</text>
+</g>
+<!-- SpecificReportClass -->
+<g id="node3" class="node" pointer-events="visible" data-name="SpecificReportClass">
+
+<polygon fill="lightblue" stroke="black" points="15.54,-89.3 15.54,-163.7 236.46,-163.7 236.46,-89.3 15.54,-89.3" style=""/>
+<text text-anchor="middle" x="126" y="-147.1" font-family="Times,serif" font-size="14.00" style="">Child Report Class</text>
+<polyline fill="none" stroke="black" points="15.54,-138.9 236.46,-138.9" style=""/>
+<text text-anchor="middle" x="69.42" y="-122.3" font-family="Times,serif" font-size="14.00" style="">business_logic()</text>
+<polyline fill="none" stroke="black" points="123.3,-114.1 123.3,-138.9" style=""/>
+<text text-anchor="middle" x="179.88" y="-122.3" font-family="Times,serif" font-size="14.00" style="">generate_report()</text>
+<polyline fill="none" stroke="black" points="15.54,-114.1 236.46,-114.1" style=""/>
+<text text-anchor="middle" x="126" y="-97.5" font-family="Times,serif" font-size="14.00" style="">write_report()</text>
+</g>
+<!-- DataClass&#45;&gt;SpecificReportClass -->
+<g id="edge2" class="edge" data-name="DataClass-&gt;SpecificReportClass">
+
+<path fill="none" stroke="black" d="M342.89,-217.54C305.52,-202.02 261.71,-183.84 223.29,-167.89" style=""/>
+<polygon fill="black" stroke="black" points="225.1,-164.85 214.52,-164.25 222.42,-171.32 225.1,-164.85" style=""/>
+<text text-anchor="middle" x="339.96" y="-186.4" font-family="Times,serif" font-size="14.00" style="">  Provides Data</text>
+</g>
+<!-- AbstractBaseClass -->
+<g id="node2" class="node" pointer-events="visible" data-name="AbstractBaseClass">
+
+<polygon fill="lightblue" stroke="black" points="64.35,-229.9 64.35,-279.5 187.65,-279.5 187.65,-229.9 64.35,-229.9" style=""/>
+<text text-anchor="middle" x="126" y="-262.9" font-family="Times,serif" font-size="14.00" style="">Reports ABC</text>
+<polyline fill="none" stroke="black" points="64.35,-254.7 187.65,-254.7" style=""/>
+<text text-anchor="middle" x="126" y="-238.1" font-family="Times,serif" font-size="14.00" style="">abstract_methods()</text>
+</g>
+<!-- AbstractBaseClass&#45;&gt;SpecificReportClass -->
+<g id="edge1" class="edge" data-name="AbstractBaseClass-&gt;SpecificReportClass">
+
+<path fill="none" stroke="black" d="M126,-229.96C126,-214.47 126,-193.71 126,-174.93" style=""/>
+<polygon fill="black" stroke="black" points="129.5,-175.06 126,-165.06 122.5,-175.06 129.5,-175.06" style=""/>
+</g>
+<!-- OutputManager -->
+<g id="node5" class="node" pointer-events="visible" data-name="OutputManager">
+
+<polygon fill="lightblue" stroke="black" points="180.14,-36 71.86,-36 71.86,0 180.14,0 180.14,-36" style=""/>
+<text text-anchor="middle" x="126" y="-13.8" font-family="Times,serif" font-size="14.00" style="">Output Manager</text>
+</g>
+<!-- SpecificReportClass&#45;&gt;OutputManager -->
+<g id="edge5" class="edge" data-name="SpecificReportClass-&gt;OutputManager">
+
+<path fill="none" stroke="black" d="M126,-89.44C126,-75.91 126,-60.71 126,-47.91" style=""/>
+<polygon fill="black" stroke="black" points="129.5,-48.01 126,-38.01 122.5,-48.01 129.5,-48.01" style=""/>
+<text text-anchor="middle" x="178.68" y="-58.2" font-family="Times,serif" font-size="14.00" style="">  Generates Output</text>
+</g>
+<!-- ConcurrencyManager -->
+<g id="node4" class="node" pointer-events="visible" data-name="ConcurrencyManager">
+
+<polygon fill="lightblue" stroke="black" points="603.56,-404 462.44,-404 462.44,-368 603.56,-368 603.56,-404" style=""/>
+<text text-anchor="middle" x="533" y="-381.8" font-family="Times,serif" font-size="14.00" style="">Concurrency Manager</text>
+</g>
+<!-- ConcurrencyManager&#45;&gt;DataClass -->
+<g id="edge3" class="edge" data-name="ConcurrencyManager-&gt;DataClass">
+
+<path fill="none" stroke="black" d="M519.11,-367.56C505.54,-350.52 484.3,-323.86 465.96,-300.84" style=""/>
+<polygon fill="black" stroke="black" points="468.75,-298.72 459.78,-293.08 463.27,-303.09 468.75,-298.72" style=""/>
+<text text-anchor="middle" x="530.77" y="-337.4" font-family="Times,serif" font-size="14.00" style="">  Manages</text>
+</g>
+<!-- ConcurrencyManager&#45;&gt;SpecificReportClass -->
+<g id="edge4" class="edge" data-name="ConcurrencyManager-&gt;SpecificReportClass">
+
+<path fill="none" stroke="black" d="M568.83,-367.7C585.18,-357.74 602.89,-343.53 612,-325.2 634.99,-278.96 645.36,-248.42 612,-209 566.23,-154.92 376.26,-136.7 247.83,-130.58" style=""/>
+<polygon fill="black" stroke="black" points="248.03,-127.09 237.89,-130.13 247.72,-134.08 248.03,-127.09" style=""/>
+<text text-anchor="middle" x="660.21" y="-250.5" font-family="Times,serif" font-size="14.00" style="">  Triggers</text>
+</g>
+</g>
+</svg>
