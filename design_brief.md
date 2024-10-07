@@ -4,7 +4,7 @@
 
 ### System Overview
 
-Our application generates time-sensitive reports using a custom thread-safe library to load files into pandas dataframes. The system processes dozens of files, some exceeding 1GB, to produce several reports, each requiring a subset of the loaded data. To optimize performance, we employ multithreaded batch loading and generate reports as soon as their required datasets are available.
+Our application generates time-sensitive reports using a custom thread-safe library to load files into Pandas dataframes. The system processes dozens of files, some exceeding 1GB, to produce several reports, each requiring a subset of the loaded data. To optimize performance, we employ multithreaded batch loading and generate reports as soon as their required datasets are available.
 
 ### Object Model
 
